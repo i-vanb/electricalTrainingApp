@@ -1,13 +1,186 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-auto-rows: 50px auto 50px;
+    grid-gap: 2px;
+    width: 100%;
+    height: 100vh;
+}
+
+.App-header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #1b3547;
+    padding-top: 10px;
+    font-family: "Palatino Linotype";
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.content-wrap {
+    position: relative;
+    min-width: 600px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.App-left {
+    height: 100%;
+    background-color: #1b3547;
+    color: white;
+    padding-left: 10px;
+}
+
+.App-right {
+    height: 100%;
+    background-color: #c7d4dc;
+}
+
+.App-bottom {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #1b3547;
+    color: white;
+    font-family: inherit;
+}
+
+body button:focus {
+    outline: 0;
+}
+
+.elements-menu {
+    position: absolute;
+    background-color: rgba(220, 220, 220, 0.41);
+}
+
+.elements-menu button {
+    width: 100%;
+}
+
+.App-left span {
+    color: red;
+}
+
+.list-group button {
+    font-size: small;
+}
+
+.menu-left button {
+    background-color: #1b3547;
+    color: #a7a7a7;
+    text-align: right;
+}
+
+.menu-left button:hover {
+    background-color: #171f2e;
+    color: white;
+}
+
+
+.list-group li {
+    font-size: small;
+    cursor: pointer;
+}
+
+.menu-left li {
+    background-color: #1b3547;
+    color: #a7a7a7;
+    text-align: right;
+}
+
+.menu-left li:hover {
+    background-color: #171f2e;
+    color: white;
+}
+
+.report {
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.report-wrap > .toast {
+    max-width: 700px !important;
+    opacity: 0.8 !important;
+    overflow-y: scroll !important;
+}
+
+.settings {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.setBtn {
+    background-color: #1b3547;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    border-style: initial;
+    background-image: url("./img/settings3.png");
+    background-size: contain;
+    opacity: 1;
+    transition: opacity .1s;
+}
+
+.setBtn:hover {
+    transition: opacity .1s;
+    opacity: 0.7;
+}
+.btn-color:hover {
+    opacity: 0.9;
+}
+
+
+.filterRect {
+    filter: blur(10px);
+}
+
+.task-menu {
+    z-index: 10;
+}
+
+.task-menu > .toast {
+    max-width: 700px !important;
+    opacity: 0.8 !important;
+    /*overflow-y: scroll !important;*/
+}
+.task-menu-items>button:hover {
+    background-color: gray;
+}
+
+.warning {
+    z-index: 5;
+}
+
+.warning > .toast {
+    max-width: 700px !important;
+    opacity: 0.8 !important;
+}
+
+.warning-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+.warning-options>button {
+
 }
